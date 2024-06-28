@@ -15,20 +15,22 @@
  * limitations under the License.
  */
 
-package org.apache.hugegraph.pd.common;
+package org.apache.hugegraph.store.cmd;
 
-import org.junit.After;
-import org.junit.BeforeClass;
+import org.apache.hugegraph.pd.grpc.Metapb;
 
-public class BaseCommonTest {
+import lombok.Data;
 
-    @BeforeClass
-    public static void init() {
+@Data
+public class UpdatePartitionRequest extends HgCmdBase.BaseRequest {
 
-    }
+    private int startKey;
+    private int endKey;
 
-    @After
-    public void teardown() {
-        // pass
+    private Metapb.PartitionState workState;
+
+    @Override
+    public byte magic() {
+        return HgCmdBase.RAFT_UPDATE_PARTITION;
     }
 }

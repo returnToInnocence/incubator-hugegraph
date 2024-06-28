@@ -29,7 +29,6 @@ import lombok.extern.slf4j.Slf4j;
         HgAssertTest.class,
         KVPairTest.class,
 })
-
 @Slf4j
 public class CommonSuiteTest {
 

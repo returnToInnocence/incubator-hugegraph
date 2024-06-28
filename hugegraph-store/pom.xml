@@ -38,9 +38,9 @@
         <module>hg-store-grpc</module>
         <module>hg-store-client</module>
         <module>hg-store-test</module>
+        <module>hg-store-rocksdb</module>
+        <module>hg-store-core</module>
         <!--        TODO: uncomment later-->
-        <!--        <module>hg-store-rocksdb</module>-->
-        <!--        <module>hg-store-core</module>-->
         <!--        <module>hg-store-node</module>-->
         <!--        <module>hg-store-dist</module>-->
         <!--        <module>hg-store-cli</module>-->
@@ -56,7 +56,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!--        TODO: uncomment later-->
             <dependency>
                 <groupId>org.apache.hugegraph</groupId>
                 <artifactId>hg-store-common</artifactId>
@@ -67,21 +66,22 @@
                 <artifactId>hg-store-grpc</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!--            <dependency>-->
-            <!--                <groupId>org.apache.hugegraph</groupId>-->
-            <!--                <artifactId>hg-store-rocksdb</artifactId>-->
-            <!--                <version>${project.version}</version>-->
-            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.apache.hugegraph</groupId>
+                <artifactId>hg-store-rocksdb</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.hugegraph</groupId>
                 <artifactId>hg-store-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!--            <dependency>-->
-            <!--                <groupId>org.apache.hugegraph</groupId>-->
-            <!--                <artifactId>hg-store-core</artifactId>-->
-            <!--                <version>${project.version}</version>-->
-            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.apache.hugegraph</groupId>
+                <artifactId>hg-store-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--        TODO: uncomment later-->
             <!--            <dependency>-->
             <!--                <groupId>org.apache.hugegraph</groupId>-->
             <!--                <artifactId>hg-store-transfer</artifactId>-->
@@ -254,7 +254,7 @@
         <!--                        <version>2.20</version>-->
         <!--                        <executions>-->
         <!--                            <execution>-->
-        <!--                                <id>store-rocksdb-test</id>-->
+        <!--                                <id>sit -test</id>-->
         <!--                                <goals>-->
         <!--                                    <goal>test</goal>-->
         <!--                                </goals>-->
